@@ -44,7 +44,7 @@ Class blank_module extends CModule
 	function InstallDB()
 	{
 		// Сохранил путь к модулю
-		Option::set("soobwa_commentspro", "path", $this->GetPath(true));
+		Option::set("blank_module", "path", $this->GetPath(true));
 
 		return true;
 	}
@@ -55,7 +55,7 @@ Class blank_module extends CModule
 	function UnInstallDB()
 	{
 		// Удаляем путь к модулю
-		Option::delete("soobwa_commentspro", "path");
+		Option::delete("blank_module", "path");
 
 		return true;
 	}
