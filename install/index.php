@@ -3,12 +3,13 @@
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\Application;
 use Bitrix\Main\ModuleManager;
+use Bitrix\Main\Config\Option;
 
 Loc::loadMessages(__FILE__);
 
 Class blank_module extends CModule
 {
-	var $MODULE_ID = "soobwa.commentspro";
+	var $MODULE_ID = "blank_module";
 	var $MODULE_VERSION;
 	var $MODULE_VERSION_DATE;
 	var $MODULE_NAME;
@@ -80,15 +81,6 @@ Class blank_module extends CModule
 	 * */
 	function InstallFiles()
 	{
-		// Копируем компоненты
-		//CopyDirFiles($this->GetPath()."/install/components", $_SERVER["DOCUMENT_ROOT"]."/bitrix/components", true, true);
-
-		// Копируем гаджет
-		//CopyDirFiles($this->GetPath()."/install/gadgets", $_SERVER["DOCUMENT_ROOT"]."/bitrix/gadgets", true, true);
-
-		// Копируем админские файлы
-		//CopyDirFiles($this->GetPath()."/install/admin/", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin", true, true);
-
 		return true;
 	}
 
@@ -97,15 +89,6 @@ Class blank_module extends CModule
 	 * */
 	function UnInstallFiles()
 	{
-		// Удоляем компоненты
-		//DeleteDirFiles($this->GetPath()."/install/components", $_SERVER["DOCUMENT_ROOT"]."/bitrix/components");
-
-		// Удаляет гаджет
-		//DeleteDirFiles($this->GetPath()."/install/gadgets", $_SERVER["DOCUMENT_ROOT"]."/bitrix/gadgets");
-
-		// Удоляем админские файлы
-		//DeleteDirFiles($this->GetPath()."/install/admin", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
-
 		return true;
 	}
 
